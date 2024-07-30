@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolos de Seguridad</title>
+    <link rel="stylesheet" href="https://gleaming-zabaione-a8c197.netlify.app/content.css">
+</head>
+
+<body>
+    <div id="div_4_2" class="responsive-div">
+        <div class="triptico">
+            <div class="pagina_left portada">
+                <div class="contenido">
+                    <div class="header_tema">
+                        <h2>4.2. Protocolos de seguridad existentes y cómo deben seguirse</h2>
+                    </div>
+                    <p>En el entorno del comercio electrónico, existen varios protocolos de seguridad establecidos que son fundamentales para <strong>garantizar la protección de las transacciones en línea.</strong> Estos protocolos definen estándares y prácticas que deben seguirse rigurosamente para asegurar la integridad y la confidencialidad de los datos de los usuarios. Algunos de los protocolos de seguridad más importantes, y que no han sido mencionados en apartados anteriores, incluyen:</p>
+                    <button id="abrir1" class="hacer_click icono_abrir"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 24 24"> <path fill="#255541" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"></path> </svg></button>
+                </div>
+            </div>
+            <div class="pagina_right interior1">
+                <div class="contenido">
+                    <h2>1. Tokenización</h2>
+                    <p>Sustituye datos sensibles, como números de tarjetas de crédito...</p>
+                    <h2>Implementación:</h2>
+                    <ul>
+                        <li>Proveedor de servicios: utilizar un proveedor de tokenización para manejar y almacenar los tokens.</li>
+                        <li>Integración: integrar la solución de tokenización con el sistema de procesamiento de pagos del negocio.</li>
+                    </ul>
+                    <button id="cerrar1" class="icono_cerrar"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 24 24" style="transform: rotate(180deg);"> <path fill="#255541" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h14v-7h2v7q0 .825-.587 1.413T19 21zm4.7-5.3l-1.4-1.4L17.6 5H14V3h7v7h-2V6.4z"></path> </svg></button>
+                </div>
+            </div>
+            <div class="pagina_right interior2">
+                <div class="contenido">
+                    <h2>2.Cifrado de datos</h2>
+                    <p><strong>Transmisión y almacenamiento:</strong> Asegurarse de que todos los datos sensibles se cifran tanto en tránsito como en reposo.</p>
+                    <h2>Implementación:</h2>
+                    <p><strong>Gestión de claves:</strong> Utilizar prácticas seguras para la gestión y almacenamiento de claves de cifrado.</p>
+                    <button id="abrir3">Abrir Página 3</button>
+                </div>
+            </div>
+            <div class="pagina_left interior3">
+                <div class="contenido">
+                    <h2>3. Seguridad en la aplicación web</h2>
+                    <p>Implementar medidas de seguridad a nivel de aplicación para proteger contra amenazas comunes...</p>
+                    <h2>Implementación:</h2>
+                    <ul>
+                        <li>Validación de entrada: asegurar que todas las entradas de usuario sean validadas y sanitizadas.</li>
+                        <li>Actualizaciones: mantener todas las aplicaciones y bibliotecas de terceros actualizadas con los últimos parches de seguridad.</li>
+                    </ul>
+                    <h2>No olvidemos los que sí han sido mencionados con anterioridad:</h2>
+                    <p>SSL/TLS (Secure Sockets Layer/Transport Layer Security)</p>
+                    <p>PCI DSS (Payment Card Industry Data Security Standard)</p>
+                    <p>Firewalls y sistemas de detección/prevención de intrusos (IDS/IPS)</p>
+                    <p>Autenticación de dos factores (2FA)</p>
+                    <button id="cerrar2">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('abrir1').addEventListener('click', function () {
+            document.querySelector('.interior3').style.transform = 'translateX(0) rotateY(0deg)';
+            document.querySelector('.interior1').style.transform = 'translateX(0) rotateY(0deg)';
+            document.querySelector('.portada').style.transform = 'rotateY(-180deg)';
+            document.querySelector('.icono_abrir').classList.remove('hacer_click');
+            document.querySelector('.icono_cerrar').classList.add('hacer_click');
+        });
+
+        document.getElementById('abrir3').addEventListener('click', function () {
+            document.querySelector('.interior3').style.transform = 'translateX(0) rotateY(0deg)';
+        });
+
+        document.getElementById('cerrar1').addEventListener('click', function () {
+            document.querySelector('.interior3').style.transform = 'translateX(0) rotateY(180deg)';
+            document.querySelector('.interior1').style.transform = 'translateX(0) rotateY(180deg)';
+            document.querySelector('.portada').style.transform = 'rotateY(0deg)';
+            document.querySelector('.icono_abrir').classList.add('hacer_click');
+            document.querySelector('.icono_cerrar').classList.remove('hacer_click');
+        });
+
+        document.getElementById('cerrar2').addEventListener('click', function () {
+            document.querySelector('.interior3').style.transform = 'rotateY(-180deg)';
+        });
+    </script>
+</body>
+
+</html>
